@@ -1,0 +1,29 @@
+{
+  "name": "online-blogging-system",
+  "version": "1.0.0",
+  "description": "online blogging system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js", 
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/officialshiva/online-blogging-system.git"
+  },
+  "author": "Shiva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/officialshiva/online-blogging-system/issues"
+  },
+  "homepage": "https://github.com/officialshiva/online-blogging-system#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  }
+}
