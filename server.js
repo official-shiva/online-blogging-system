@@ -2,6 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const colors = require("colors");
+const dotenv = require("dotenv");
+
+// env config 
+dotenv.config();
 
 // rest object 
 const app = express();
@@ -18,7 +22,10 @@ app.get("/", (req, res) => {
     })
 });
 
+// port 
+const PORT = process.env.PORT || 5000
+
 // listen
-app.listen(5000, () => {
-    console.log("server is running at port 5000".bgCyan.white)
+app.listen(PORT, () => {
+    console.log(`server is running on ${process.env.DEV_MODE} port ${PORT}`.bgGreen.white)
 })
