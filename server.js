@@ -3,9 +3,13 @@ const cors = require("cors");
 const morgan = require("morgan");
 const colors = require("colors");
 const dotenv = require("dotenv");
+const connectDB = require("./config/db");
 
 // env config 
 dotenv.config();
+
+// mongodb connection
+connectDB();
 
 // rest object 
 const app = express();
@@ -29,3 +33,4 @@ const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
     console.log(`server is running on ${process.env.DEV_MODE} port ${PORT}`.bgGreen.white)
 })
+ 
